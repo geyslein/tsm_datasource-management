@@ -5,7 +5,7 @@
             :parser="parser"
             outlined
             class="mt-5">
-      <parser-item :parser="parser"/>
+      <parser-item :parser="parser" />
       <v-card-actions align="right">
         <item-actions />
       </v-card-actions>
