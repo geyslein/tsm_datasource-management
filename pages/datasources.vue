@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <description :description="description" />
-    <datasource-list :datasources="datasources" />
+    <description :description="description"/>
+    <datasource-list :datasources="datasources"/>
   </v-container>
 </template>
 <script>
@@ -38,6 +38,26 @@ export default {
           path: '/uploads',
           filenamePattern: 'data-*.csv',
         },
+        storage: {
+          id: 1,
+          label: 'CRNS MinIO Bucket'
+        },
+        parser: {
+          label: 'GCEF IMMS CSV Parser',
+          type: 'CSV',
+          delimiter: ',',
+          excludeHeadLines: 2,
+          excludeFootLines: 0,
+          timestampField: 1,
+          timestampExpression: 'yyyy-mm-dd hh24:mi:ss',
+        },
+        datastore: {
+          type: 'POSTGRES',
+          label: 'TOR Schema on Postgres',
+          url: 'postgresql://postgres.intranet.ufz.de:5432/tor',
+          username: 'tor',
+          password: 'HideMeIfYouCan4711',
+        },
         metrics: {
           timestamps: {
             received: 2342666,
@@ -45,7 +65,7 @@ export default {
             stored: 1102000,
           }
         }
-      },{
+      }, {
         id: 2,
         project: 'Cosmic Ray Neutron Sensing',
         label: 'Cosmic Ray Neutron Sensing Rover ',
@@ -67,6 +87,23 @@ export default {
               id: '17351e25-7792-441f-9798-8d5d1d890920',
             }
           },
+        },
+        storage: {
+          id: 2,
+          label: 'CRNS Amzn S3 Bucket'
+        },
+        parser: {
+          label: 'Ecotech Binary Parser 2021',
+          type: 'ECOTECH',
+          syncTime: false,
+          failureValue: -9999,
+        },
+        datastore: {
+          type: 'INFLUX',
+          label: 'WKDV Datacenter Energy Monitoring with Influx',
+          url: 'influx://webapps.ufz.de/wkdv-energy-monitoring/influx01',
+          username: 'wkdv-energy-monitoring',
+          password: 'HideMeIfYouCan4711',
         },
         metrics: {
           timestamps: {

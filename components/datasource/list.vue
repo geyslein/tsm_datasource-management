@@ -66,6 +66,51 @@
               </v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Rawdata Storage</v-list-item-title>
+              <v-list-item-subtitle>
+                <v-expansion-panels focusable>
+                  <v-expansion-panel>
+                    <v-expansion-panel-header>{{ datasource.storage.label }}</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <storage-item :storage="datasource.storage" />
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+                </v-expansion-panels>
+              </v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Parser</v-list-item-title>
+              <v-list-item-subtitle>
+                <v-expansion-panels focusable>
+                  <v-expansion-panel>
+                    <v-expansion-panel-header>{{ datasource.parser.label }}</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <parser-item :parser="datasource.parser" />
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+                </v-expansion-panels>
+              </v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Datastore</v-list-item-title>
+              <v-list-item-subtitle>
+                <v-expansion-panels focusable>
+                  <v-expansion-panel>
+                    <v-expansion-panel-header>{{ datasource.datastore.label }}</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <datastore-item :datastore="datasource.datastore" />
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+                </v-expansion-panels>
+              </v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
           <v-expansion-panels focusable>
             <v-expansion-panel>
               <v-expansion-panel-header>Metrics</v-expansion-panel-header>

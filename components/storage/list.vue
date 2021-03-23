@@ -1,13 +1,9 @@
 <template>
   <v-container>
-    <v-card v-for="storage in storages" outlined
+    <storage-item v-for="storage in storages" outlined
             :key="storage.id"
-            class="mt-5">
-      <v-card-title>{{ storage.label }}</v-card-title>
-      <v-card-actions align="right">
-        <item-actions />
-      </v-card-actions>
-    </v-card>
+            class="mt-5"
+            :storage="storage" />
   </v-container>
 </template>
 <script>
