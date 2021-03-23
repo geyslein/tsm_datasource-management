@@ -3,13 +3,13 @@ import colors from 'vuetify/es5/util/colors'
 export default {
 
   target: 'static',
-  //
-  // /*
-  // ** Customize the generated output folder
-  // */
-  // generate: {
-  //   dir: 'public'
-  // },
+
+  /*
+  ** Customize the generated output folder
+  */
+  generate: {
+    dir: 'public'
+  },
 
   router: {
     base: '/timeseries-management/datasource-management/'
