@@ -11,6 +11,10 @@ export default {
     dir: 'public'
   },
 
+  router: {
+    base: '/timeseries-management/datasource-management/'
+  },
+
   server: {
     host: '0.0.0.0' // default: localhost
   },
