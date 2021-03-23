@@ -4,6 +4,13 @@ export default {
 
   target: 'static',
 
+  /*
+  ** Customize the generated output folder
+  */
+  generate: {
+    dir: 'public'
+  },
+
   server: {
     host: '0.0.0.0' // default: localhost
   },
