@@ -63,7 +63,16 @@ export default {
             received: 2342666,
             parsed: 1342000,
             stored: 1102000,
-          }
+          },
+          latestValues: {
+            date: '2021-03-23 16:21',
+            values: [
+              {timestamp: '2021-03-23 16:21:00', channel: 1, value: 12.7, meta: 'V'},
+              {timestamp: '2021-03-23 16:21:00', channel: 2, value: 8.56, meta: '°C'},
+              {timestamp: '2021-03-23 16:21:00', channel: 3, value: 75.5, meta: '%'},
+              {timestamp: '2021-03-23 16:21:00', channel: 4, value: 120, meta: '°'},
+            ],
+          },
         }
       }, {
         id: 2,
@@ -110,7 +119,10 @@ export default {
             received: 2342666,
             parsed: 1342000,
             stored: 1233000,
-          }
+          },
+          latestValues: {
+            date: null,
+          },
         }
       },],
     }
